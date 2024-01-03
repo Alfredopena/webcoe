@@ -1,0 +1,82 @@
+<section class="module module-gray" id="habilidades">
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="m-title c-align">
+        <h2>{{head.title}}</h2>
+        
+        
+        
+        
+      </div>
+    </div>
+  </div>
+  
+
+  
+<div class="container">
+  <div class="row">
+    
+    <div class="col-xl" *ngFor="let d of skills; let ixr = index;" style="margin-bottom: 40px;">
+      <h5>{{d.title}}</h5>
+
+      <div *ngFor="let r of d.info; let ixr = index;">
+        <div class="progress-item" *ngFor="let g of r;let ix = index;">
+          <div class="progress-title">{{g.title}} </div>
+          
+          <div *ngIf="d.title=='HARD SKILLS'">
+            <ngb-progressbar type="success" [value]="g.progress" [striped]="true"></ngb-progressbar>
+          </div>
+          <div *ngIf="g.title=='Angular'">
+            <img src="../../../assets/images/Angular_full_color_logo.svg.png" width="50">
+          </div>
+
+          <div *ngIf="g.title=='Ionic'">
+            <img src="../../../assets/images/ionicLogo.svg.png" width="80">
+          </div>
+          <div *ngIf="g.title=='.Net'">
+            <img src="../../../assets/images/net-logo.png" width="80">
+          </div>
+
+          <div *ngIf="g.title=='C'">
+            <img src="../../../assets/images/desktop-wallpaper-c-programming-language.jpg" width="50">
+          </div>
+
+          <div *ngIf="g.title=='Java'">
+            <img src="../../../assets/images/java1.png" width="120">
+          </div>
+          <div *ngIf="g.title=='Python'">
+            <img src="../../../assets/images/Pythont.svg.png" width="80">
+          </div>
+          <div *ngIf="g.title=='C#'">
+            <img src="../../../assets/images/csharp.png" width="80">
+          </div>
+          
+          
+          <div *ngIf="g.title=='Elocuente'">
+            <img src="../../../assets/images/Debates-en-clase.jpg" width="200">
+          </div>
+
+          <div *ngIf="g.title=='Capacidad de trabajo'">
+            <img src="../../../assets/images/trabajador.jpeg" width="200">
+          </div>
+
+          <div *ngIf="g.title=='Creativo'">
+            <img src="../../../assets/images/creatividad.jpg" width="200">
+          </div>
+          <div *ngIf="g.title=='Trabajo en equipo'">
+            <img src="../../../assets/images/equipo.jpg" width="200">
+          </div>
+      </div>
+
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+</section>

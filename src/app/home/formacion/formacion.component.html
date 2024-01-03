@@ -1,0 +1,113 @@
+<section class="module" id="formacion">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="m-title c-align">
+            <h2>{{title}}</h2>
+
+            <!--<h6>{{subtitle}}</h6>-->
+          </div>
+          
+          
+          <div class="col-md" style="display: flex; align-items: center;">
+                <div class="col-md-5" style="flex: 1; text-align: justify;">
+                    <h5>{{formacionAcademica.title}}</h5>
+                    <div [innerHTML]="formacionAcademica.data"></div>
+                </div>
+                <div>
+                    <p><a href="https://www.google.com/maps/place/School+of+Informatics/@38.9902177,-3.9200747,15z/data=!4m6!3m5!1s0xd6bc3441815e52f:0xe9d3de4afcb57d4d!8m2!3d38.9902177!4d-3.9200747!16s%2Fg%2F1tf_v65_?entry=ttu">
+                        <img src="../../../assets/images/esi-pano.jpg" alt="Foto de la ESI" width="400px" height="100" style="max-width: 100%; height: auto;" >
+                        </a></p>
+                </div>
+            </div>
+
+
+            <div class="col-md" style="display: flex; align-items: center;">
+                <div class="col-md-5" style="flex: 1; text-align: justify;">
+                    <h5>{{formacionAcademicaHolanda.title}}</h5>
+                    <div [innerHTML]="formacionAcademicaHolanda.data"></div>
+                </div>
+                <div>
+                    <p><a href="https://www.google.com/maps/place/Radboud+University+Nijmegen/@51.8220189,5.8612438,17z/data=!3m1!4b1!4m6!3m5!1s0x47c708f0080f42f9:0xe2c147f96280b1b2!8m2!3d51.8220189!4d5.8638187!16zL20vMDN0Nno5?entry=ttu">
+                        <img src="../../../assets/images/Radboud-University.jpg" alt="Foto de Radboud en Nijmegen" width="400px" height="100" style="max-width: 100%; height: auto;" >
+                        </a></p>
+                </div>
+            </div>
+
+            <div class="m-title c-align">
+                <h2>FORMACIÓN COMPLEMENTARIA</h2>
+    
+                <!--<h6>{{subtitle}}</h6>-->
+            </div>
+            <div class="col-md" style="display: flex; align-items: center;">
+                <div class="col-md-5"  style="flex: 1; text-align: justify;">
+                    <h5>{{formacionComplementaria.title}}</h5>
+                    <div [innerHTML]="formacionComplementaria.data"></div>
+                </div>
+                
+                <div>
+                    <p><embed src="../../../assets/docs/diploma-alfredo-pena-carvallo-de-cora_03933908b_2023-07-18_204011 (1).pdf" type="application/pdf" width="100%" height="600px" />
+                        <img src="../../../assets/images/flutter.png" alt="Foto de Flutter" width="400px" height="100" style="max-width: 100%; height: auto;" >
+                        </p>
+                </div>
+            </div>
+            
+          <div class="m-title c-align">
+            <h2>{{head.title}}</h2>
+            
+
+
+            <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="m-title c-align">
+                        <h6>Español: Lengua nativa</h6>
+                        <h6>Inglés: Nivel alto</h6>
+                        <h6>Instituciones en las que he estado, fuera de España</h6>
+                      <!--<h6>{{head.subtitle}}</h6>-->
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <ul class="timeline">
+                      <li *ngFor="let job of jobs">
+                        <div class="timeline-badge"></div>
+                        <div class="timeline-panel">
+                          <div class="timeline-body">
+                            <h5 class="timeline-title">{{job.position}} | {{job.period}}</h5>
+                            <h6 class="timeline-description">{{job.company}}  </h6>
+                            <div [innerHTML]="job.displayedDescription"></div>
+                            <div *ngIf="job.company=='AÑO EN INGLATERRA'">
+
+                                <p><a href="https://www.stjohnsdevon.co.uk/">
+                                    <img src="../../../assets/images/logoINglaterra.png" width="200" height="100" style="max-width: 100%; height: auto;" >
+                                    </a></p>
+                                
+                            </div>
+
+                            <div *ngIf="job.company=='AÑO EN HOLANDA'">
+
+                                <p><a href="https://www.ru.nl/en/education/bachelors/computing-science">
+                                    <img src="../../../assets/images/logoHolanda.png" width="200" height="100" style="max-width: 100%; height: auto;" >
+                                    </a></p>
+                                
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <div class="timeline-top"></div>
+                    </ul>
+                    <div class="text-center"><a class="btn btn-lg btn-gray" target="_blank" href="/assets/docs/resume.pdf" download ><span>Descargar CV</span></a></div>
+                  </div>
+                </div>
+              </div>
+
+
+            <!--<h6>{{subtitle}}</h6>-->
+          </div>
+
+        </div>
+      </div>
+    </div>
+</section>
